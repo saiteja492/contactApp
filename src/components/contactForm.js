@@ -33,10 +33,11 @@ class ContactForm extends React.Component{
               email: this.state.email,
               number: this.state.number
           }
-          console.log("obj",obj);
-            this.props.addContact(obj)
+          this.setState({name:"",email:"",number:""});
+            this.props.addContact(obj);
+            
         }
-        console.log("this.state", this.state);
+        
         
     }
     onChangeName = (name)=>{
